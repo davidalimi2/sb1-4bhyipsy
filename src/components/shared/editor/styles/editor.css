@@ -1,0 +1,60 @@
+.ProseMirror {
+  @apply prose max-w-none focus:outline-none min-h-[200px] p-4;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  @apply text-gray-400 pointer-events-none;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+}
+
+.ProseMirror a {
+  @apply text-indigo-600 hover:text-indigo-900;
+}
+
+.ProseMirror:focus {
+  @apply outline-none;
+}
+
+.ProseMirror > * + * {
+  @apply mt-4;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  @apply pl-6;
+}
+
+.ProseMirror h1 {
+  @apply text-2xl font-bold;
+}
+
+.ProseMirror h2 {
+  @apply text-xl font-bold;
+}
+
+.ProseMirror h3 {
+  @apply text-lg font-bold;
+}
+
+.ProseMirror blockquote {
+  @apply pl-4 border-l-4 border-gray-200 italic;
+}
+
+.ProseMirror code {
+  @apply bg-gray-100 px-1 py-0.5 rounded;
+}
+
+.ProseMirror table {
+  @apply border-collapse w-full;
+}
+
+.ProseMirror th,
+.ProseMirror td {
+  @apply border border-gray-200 p-2;
+}
+
+.ProseMirror img {
+  @apply max-w-full h-auto;
+}
